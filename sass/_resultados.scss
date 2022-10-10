@@ -1,0 +1,57 @@
+.resultados{
+    .resultados__buscador{
+        border: $borde;
+        background-color: $coral;
+        padding: 20px;
+        margin: 20px;
+        height: fit-content;
+        form{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            margin: 10px;
+        }
+    }
+    .resultados__estudios{
+        margin: 5px;
+        margin-bottom: 20px;
+        table{
+            tr{
+                td{
+                    background-color: lightgray;
+                    font-weight: bold;
+                    padding: 1% 5% 1% 5%;
+                    border: 1%;
+                    width: 300px;
+                    text-align: center;
+                }
+            }
+            .primeraLinea{
+                td{
+                    background-color: grey;
+                }
+            }
+        }
+    }
+    @media (min-width: 600px){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 300px 300px;
+        grid-template-areas: 
+        "foto buscador"
+        "estudios estudios"
+        ;
+        .resultados__foto{
+            grid-area: foto;
+            width: 90%;
+            margin: 20px;
+        }
+        .resultados__buscador{
+            grid-area: buscador;
+        }
+        .resultados__estudios{
+            grid-area: estudios;
+            margin-left: 50px;
+        }
+    }
+}

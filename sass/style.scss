@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+@import "globalVar";
+@import "header";
+@import "footer";
+@import "home";
+@import "turnos";
+@import "indicaciones";
+@import "resultados";
+@import "contacto";
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}

@@ -1,0 +1,30 @@
+body{
+    header{
+        background-color: rgb(73 103 115);
+        nav{
+            div{
+                background-color: rgb(73 103 115);
+                font-weight: bold;
+                font-style: normal;
+                text-decoration: none;
+                div{
+                    ul{
+                        li{
+                            a:visited{
+                                text-decoration: none;
+                                color: rgb(73 103 115);
+                            }
+                            a:link{
+                                text-decoration: none;
+                                color: rgb(73 103 115);
+                            }
+                        }
+                        .acatoy{
+                            background-color: rgb(21 56 64);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

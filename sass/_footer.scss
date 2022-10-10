@@ -1,0 +1,19 @@
+footer{
+    padding-top: 5px;
+    padding-right: 10px;
+    background-color: rgb(73 103 115);
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 35px;
+    div{
+        margin: 0px 5px 2px 5px
+    }
+    .redes:hover{
+    transform: scale(1,2);
+}
+}

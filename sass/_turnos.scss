@@ -1,0 +1,41 @@
+.turnos{
+    margin-bottom: 30px;
+    div{
+        margin: 10px;
+        border: $borde;
+        background-color: $anaranjado;
+        padding: 10px;
+        width: 90%;
+        h1, h2{
+            @include fuente (xx-large, bold)
+        }
+        form{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            input{
+                margin: 5px;
+            }
+            .extrac{
+                display: flex;
+                flex-flow: row;
+                align-items: baseline;
+                border: none;
+            }
+        }
+    }
+    @media (min-width: 600px){
+        display: grid;
+        justify-items: center;
+        grid-template: 100% 50% 50%;
+        grid-template-areas: 
+        "datos elegir"
+        ;
+        .datos{
+            grid-area: datos;
+        }
+        .elegir{
+            grid-area: elegir;
+        }
+    }
+}

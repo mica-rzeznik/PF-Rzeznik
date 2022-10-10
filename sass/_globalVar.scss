@@ -1,0 +1,28 @@
+$canela: #f2ecd8;
+$anaranjado: #f2c4b3;
+$coral: #a67772;
+$azulgrisaceo: #496773;
+$verdeazulado: #153840;
+$borde: 2px solid black;
+@mixin cuadradito ($border, $backgroundcolor, $padding, $border-radius){
+    border: $border;
+    background-color: $backgroundcolor;
+    padding: $padding;
+    border-radius: $border-radius;
+}
+@mixin fuente ($font-size, $font-weight){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+@mixin mensajes ($display, $flex-flow, $justify-content, $margin){
+    display: $display;
+    flex-flow: $flex-flow;
+    justify-content: $justify-content;
+    margin: $margin;
+}
+@mixin mensajez ($display, $flex-flow, $align-items, $margin){
+    display: $display;
+    flex-flow: $flex-flow;
+    align-items: $align-items;
+    margin: $margin;
+}

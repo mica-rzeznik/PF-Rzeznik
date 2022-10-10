@@ -1,0 +1,76 @@
+main{
+    margin-bottom: 40px;
+    .carrusel{
+        height: 1000px;
+    }
+    .principal{
+        margin: 5px;
+        @include cuadradito ($borde, $anaranjado, 20px, 30px);
+        font-size: medium;
+        h1, h2{
+            @include fuente (large, bold)
+        }
+    }
+    .principal:hover{
+        background-color: $canela;
+    }
+    .abajo{
+        margin: 3%;
+        @include cuadradito ($borde, $coral, 20px, 30px);
+        display: flex;
+        flex-direction: row;
+        .direccion{
+            margin: 5px;
+        }
+        font-size: medium;
+        h2{
+            @include fuente (large, bold)
+        }
+    }
+    .abajo:hover{
+        background-color: $canela;
+    }
+    @media (min-width: 600px){
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(3, 150px) 250px;
+        grid-template-areas: 
+        "carrusel carrusel info1 info1 info1"
+        "carrusel carrusel info2 info2 info2"
+        "carrusel carrusel info3 info3 info3"
+        "info4 info5 info6 info7 info8"
+        ;
+        .carrusel{
+            margin: 20px;
+            grid-area: carrusel;
+        }
+        .info1{
+            grid-area: info1;
+        }
+        .info2{
+            grid-area: info2;
+        }
+        .info3{
+            grid-area: info3;
+        }
+        .info4{
+            grid-area: info4;
+        }
+        .info5{
+            grid-area: info5;
+        }
+        .info6{
+            grid-area: info6;
+        }
+        .info7{
+            grid-area: info7;
+        }
+        .info8{
+            grid-area: info8;
+        }
+        .abajo{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.mensaje{
+    margin: 2%;
+    margin-bottom: (100%-506px);
+    form{
+        .mensaje1{
+            @include mensajes (flex, column, space-between, 2%);
+        }
+        .mensaje2{
+            @include mensajes (flex, column, space-between, 2%);
+            .check{
+                @include mensajez (flex, row, baseline, none);
+            }
+        }
+        .mensaje3{
+            @include mensajes (flex, column, space-between, 1%);
+            .check{
+                @include mensajez (flex, row, baseline, none);
+            }
+            .enviar{
+                @include mensajez (flex, row, baseline, none);
+                input{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .mensaje4{
+        @include mensajes (flex, column, space-between, 2%);
+        .animacion{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .anima{
+                background-color: $azulgrisaceo;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+            }
+            .anima:hover{
+                animation: change-color 2s;
+            }
+            @keyframes change-color{
+                0%{
+                    transform: scale(2);
+                }
+                20%{
+                    background-color: $anaranjado;
+                }
+                40%{
+                    translate: 0px -20px;
+                }
+                60%{
+                    transform: scale(4);
+                }
+                80%{
+                    background-color: $verdeazulado;
+                }
+                100%{
+                    transform: scale(-1);
+                }
+            }
+        }
+    }
+    @media (min-width: 600px){
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "h1 h1"
+        "msn mensaje4"
+        ;
+        h1{
+            grid-area: h1;
+        }
+        form{
+            grid-area: msn;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: 
+            "mensaje1 mensaje2"
+            "mensaje3 mensaje3";
+            align-items: start;
+        }
+        .mensaje1{
+            grid-area: mensaje1;
+        }
+        .mensaje2{
+            grid-area: mensaje2;
+        }
+        .mensaje3{
+            grid-area: mensaje3;
+        }
+        .mensaje4{
+            grid-area: mensaje4;
+        }
+    }
+}
