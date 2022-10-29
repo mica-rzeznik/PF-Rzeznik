@@ -1,13 +1,13 @@
 .indicaciones{
     margin-bottom: 40px;
     margin-top: 5px;
-    width: 100vw;
     text-align: center;
     .buscador{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        padding-left: 0px;
         .buscar{
             text-decoration: none;
             display: inline-block;

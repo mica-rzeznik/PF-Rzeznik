@@ -45,7 +45,7 @@
     <section class="turnos">
         <div class="datos">
             <h1>Datos</h1>
-            <form class="turnos__opciones--form">
+            <form>
                     <label for="nombre">Nombre y apellido</label>
                     <input type="text" id="nombre" placeholder="Nombre y apellido">
                     <label for="DNI">DNI</label>
@@ -62,11 +62,11 @@
                     </select>
                     <label for="sede">Elegir sede</label>
                     <select name="Sede" id="sede">
-                        <option value="Sede 1">Sede 1</option>
-                        <option value="Sede 2">Sede 2</option>
-                        <option value="Sede 3">Sede 3</option>
-                        <option value="Sede 4">Sede 4</option>
-                        <option value="Sede 5">Sede 5</option>
+                        <option value="Sede Mar del Plata">Sede Mar del Plata</option>
+                        <option value="Sede San Telmo">Sede San Telmo</option>
+                        <option value="Sede Caballito">Sede Caballito</option>
+                        <option value="Sede Devoto">Sede Devoto</option>
+                        <option value="Sede San Isidro">Sede San Isidro</option>
                     </select>
                     <div class="extrac">
                         <p>Extracción a domicilio</p>
@@ -74,14 +74,14 @@
                     </div>
             </form>
         </div>
-        <div class="turnos__opciones elegir">
+        <div class="elegir">
             <h2>Elegir turno</h2>
-            <form class="turnos__opciones--form">
+            <form>
                 <label for="fecha">Fechas disponibles</label>
                 <input type="date" id="fecha">
                 <label for="hora">Horarios disponibles</label>
                 <input type="time" id="hora">
-                <input type="submit">
+                <button type="button" class="btn btn-light">Enviar</button>
             </form>
         </div>
     </section>

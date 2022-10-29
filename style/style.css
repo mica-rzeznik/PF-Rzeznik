@@ -55,6 +55,9 @@ main .principal h1, main .principal h2 {
   font-size: large;
   font-weight: bold;
 }
+main .principal p {
+  margin-bottom: 0px;
+}
 main .principal:hover {
   background-color: #f2ecd8;
 }
@@ -66,7 +69,14 @@ main .abajo {
   border-radius: 30px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   font-size: medium;
+  text-align: center;
+}
+main .abajo img {
+  margin: 5px;
+  width: 200px;
 }
 main .abajo .direccion {
   margin: 5px;
@@ -82,7 +92,7 @@ main .abajo:hover {
   main {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(3, 150px) 250px;
+    grid-template-rows: repeat(3, 1fr) 2fr;
     grid-template-areas: "carrusel carrusel info1 info1 info1" "carrusel carrusel info2 info2 info2" "carrusel carrusel info3 info3 info3" "info4 info5 info6 info7 info8";
   }
   main .carrusel {
@@ -117,6 +127,10 @@ main .abajo:hover {
     display: flex;
     flex-direction: column;
   }
+  main .abajo img {
+    margin: 5px;
+    width: 90%;
+  }
 }
 
 .turnos {
@@ -138,8 +152,12 @@ main .abajo:hover {
   flex-flow: column;
   justify-content: center;
 }
-.turnos div form input {
+.turnos div form input, .turnos div form button {
   margin: 5px;
+}
+.turnos div form div {
+  margin: 0;
+  padding: 10px 0px 0px 0px;
 }
 .turnos div form .extrac {
   display: flex;
@@ -151,7 +169,7 @@ main .abajo:hover {
   .turnos {
     display: grid;
     justify-items: center;
-    grid-template: 100% 50% 50%;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "datos elegir";
   }
   .turnos .datos {
@@ -165,7 +183,6 @@ main .abajo:hover {
 .indicaciones {
   margin-bottom: 40px;
   margin-top: 5px;
-  width: 100vw;
   text-align: center;
 }
 .indicaciones .buscador {
@@ -173,6 +190,7 @@ main .abajo:hover {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  padding-left: 0px;
 }
 .indicaciones .buscador .buscar {
   text-decoration: none;
@@ -222,6 +240,10 @@ main .abajo:hover {
   flex-flow: column;
   justify-content: space-around;
   margin: 10px;
+  color: white;
+}
+.resultados .resultados__buscador form button {
+  margin: 10px;
 }
 .resultados .resultados__estudios {
   margin: 5px;
@@ -261,7 +283,9 @@ main .abajo:hover {
 
 .mensaje {
   margin: 2%;
-  margin-bottom: -390%, 657px;
+  margin-bottom: 80px;
+  background-color: #f2ecd8;
+  padding: 20px;
 }
 .mensaje form .mensaje1 {
   display: flex;
@@ -279,7 +303,7 @@ main .abajo:hover {
   display: flex;
   flex-flow: row;
   align-items: baseline;
-  margin: none;
+  margin: 0px;
 }
 .mensaje form .mensaje3 {
   display: flex;
@@ -291,78 +315,23 @@ main .abajo:hover {
   display: flex;
   flex-flow: row;
   align-items: baseline;
-  margin: none;
+  margin: 0px;
 }
 .mensaje form .mensaje3 .enviar {
   display: flex;
   flex-flow: row;
   align-items: baseline;
-  margin: none;
+  margin: 0px;
+  justify-content: space-around;
 }
 .mensaje form .mensaje3 .enviar input {
   margin: 10px;
 }
 .mensaje .mensaje4 {
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  margin: 2%;
-}
-.mensaje .mensaje4 .animacion {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.mensaje .mensaje4 .animacion .anima {
-  background-color: #496773;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  margin: 10px;
-}
-.mensaje .mensaje4 .animacion .anima:hover {
-  -webkit-animation: change-color 2s;
-          animation: change-color 2s;
-}
-@-webkit-keyframes change-color {
-  0% {
-    transform: scale(2);
-  }
-  20% {
-    background-color: #f2c4b3;
-  }
-  40% {
-    translate: 0px -20px;
-  }
-  60% {
-    transform: scale(4);
-  }
-  80% {
-    background-color: #153840;
-  }
-  100% {
-    transform: scale(-1);
-  }
-}
-@keyframes change-color {
-  0% {
-    transform: scale(2);
-  }
-  20% {
-    background-color: #f2c4b3;
-  }
-  40% {
-    translate: 0px -20px;
-  }
-  60% {
-    transform: scale(4);
-  }
-  80% {
-    background-color: #153840;
-  }
-  100% {
-    transform: scale(-1);
-  }
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 @media (min-width: 600px) {
   .mensaje {

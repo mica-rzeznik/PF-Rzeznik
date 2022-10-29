@@ -13,8 +13,12 @@
             display: flex;
             flex-flow: column;
             justify-content: center;
-            input{
+            input, button{
                 margin: 5px;
+            }
+            div{
+                margin: 0;
+                padding: 10px 0px 0px 0px;
             }
             .extrac{
                 display: flex;
@@ -27,7 +31,7 @@
     @media (min-width: 600px){
         display: grid;
         justify-items: center;
-        grid-template: 100% 50% 50%;
+        grid-template-columns: 50% 50%;
         grid-template-areas: 
         "datos elegir"
         ;

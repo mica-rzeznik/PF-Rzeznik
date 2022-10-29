@@ -1,6 +1,8 @@
 .mensaje{
     margin: 2%;
-    margin-bottom: (100%-506px);
+    margin-bottom: 80px;
+    background-color: $canela;
+    padding: 20px;
     form{
         .mensaje1{
             @include mensajes (flex, column, space-between, 2%);
@@ -8,16 +10,17 @@
         .mensaje2{
             @include mensajes (flex, column, space-between, 2%);
             .check{
-                @include mensajez (flex, row, baseline, none);
+                @include mensajez (flex, row, baseline, 0px);
             }
         }
         .mensaje3{
             @include mensajes (flex, column, space-between, 1%);
             .check{
-                @include mensajez (flex, row, baseline, none);
+                @include mensajez (flex, row, baseline, 0px);
             }
             .enviar{
-                @include mensajez (flex, row, baseline, none);
+                @include mensajez (flex, row, baseline, 0px);
+                justify-content: space-around;
                 input{
                     margin: 10px;
                 }
@@ -25,42 +28,10 @@
         }
     }
     .mensaje4{
-        @include mensajes (flex, column, space-between, 2%);
-        .animacion{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            .anima{
-                background-color: $azulgrisaceo;
-                border-radius: 50%;
-                height: 20px;
-                width: 20px;
-                margin: 10px;
-            }
-            .anima:hover{
-                animation: change-color 2s;
-            }
-            @keyframes change-color{
-                0%{
-                    transform: scale(2);
-                }
-                20%{
-                    background-color: $anaranjado;
-                }
-                40%{
-                    translate: 0px -20px;
-                }
-                60%{
-                    transform: scale(4);
-                }
-                80%{
-                    background-color: $verdeazulado;
-                }
-                100%{
-                    transform: scale(-1);
-                }
-            }
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
     }
     @media (min-width: 600px){
         display: grid;
