@@ -1,45 +1,93 @@
 .turnos{
     margin-bottom: 30px;
-    div{
-        margin: 10px;
-        border: $borde;
-        background-color: $anaranjado;
-        padding: 10px;
-        width: 90%;
-        h1, h2{
-            @include fuente (xx-large, bold)
-        }
-        form{
+    form{
+        div{
+            margin: 10px;
+            border: $borde;
+            background-color: $anaranjado;
+            padding: 10px;
+            width: 90%;
+            h1, h2{
+                @include fuente (xx-large, bold)
+            }
+            .formInput, .turnoAsignado{
+                border: none;
+                margin: 5px;
+                padding: 0px;
+                width: 100%;
+            }
+            .input, .btn, .turnoAsignado{
+                margin-right: 10px;
+            }
+            .turnoAsignado{
+                text-align: center;
+                font-weight: bold;
+                margin-top: 20px;
+            }
             display: flex;
             flex-flow: column;
-            justify-content: center;
-            input, button{
-                margin: 5px;
+        }
+        @media (min-width: 600px){
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: 
+            "datos elegir"
+            ;
+            .datos{
+                grid-area: datos;
             }
-            div{
-                margin: 0;
-                padding: 10px 0px 0px 0px;
-            }
-            .extrac{
-                display: flex;
-                flex-flow: row;
-                align-items: baseline;
-                border: none;
+            .elegir{
+                grid-area: elegir;
             }
         }
     }
-    @media (min-width: 600px){
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 
-        "datos elegir"
-        ;
-        .datos{
-            grid-area: datos;
+    .consultar{
+        display: flex;
+        justify-content: center;
+        .btnConsultar{
+            background-color: $azulgrisaceo;
+            color: white;
         }
-        .elegir{
-            grid-area: elegir;
+        .btnConsultar:hover{
+            background-color: $verdeazulado;
+            color: white;
+        }
+    }
+    .tablaTurnos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        table{
+            margin: 20px;
+            font-size: 15px;
+            thead{
+                tr{
+                    th{
+                        background-color: $coral;
+                        color: white;
+                        height: 30px;
+                        padding: 5px;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    background-color: $canela;
+                    color: black;
+                    .email{
+                        width: 5%;
+                    }
+                }
+                td{
+                    padding: 5px;
+                }
+                tr:hover{
+                    background-color: $anaranjado;
+                    color: black;
+                    transform: scale(1.01);
+                }
+            }
         }
     }
 }

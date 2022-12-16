@@ -136,48 +136,88 @@ main .abajo:hover {
 .turnos {
   margin-bottom: 30px;
 }
-.turnos div {
+.turnos form div {
   margin: 10px;
   border: 2px solid black;
   background-color: #f2c4b3;
   padding: 10px;
   width: 90%;
+  display: flex;
+  flex-flow: column;
 }
-.turnos div h1, .turnos div h2 {
+.turnos form div h1, .turnos form div h2 {
   font-size: xx-large;
   font-weight: bold;
 }
-.turnos div form {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-.turnos div form input, .turnos div form button {
-  margin: 5px;
-}
-.turnos div form div {
-  margin: 0;
-  padding: 10px 0px 0px 0px;
-}
-.turnos div form .extrac {
-  display: flex;
-  flex-flow: row;
-  align-items: baseline;
+.turnos form div .formInput, .turnos form div .turnoAsignado {
   border: none;
+  margin: 5px;
+  padding: 0px;
+  width: 100%;
+}
+.turnos form div .input, .turnos form div .btn, .turnos form div .turnoAsignado {
+  margin-right: 10px;
+}
+.turnos form div .turnoAsignado {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
 }
 @media (min-width: 600px) {
-  .turnos {
+  .turnos form {
     display: grid;
     justify-items: center;
     grid-template-columns: 50% 50%;
     grid-template-areas: "datos elegir";
   }
-  .turnos .datos {
+  .turnos form .datos {
     grid-area: datos;
   }
-  .turnos .elegir {
+  .turnos form .elegir {
     grid-area: elegir;
   }
+}
+.turnos .consultar {
+  display: flex;
+  justify-content: center;
+}
+.turnos .consultar .btnConsultar {
+  background-color: #496773;
+  color: white;
+}
+.turnos .consultar .btnConsultar:hover {
+  background-color: #153840;
+  color: white;
+}
+.turnos .tablaTurnos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.turnos .tablaTurnos table {
+  margin: 20px;
+  font-size: 15px;
+}
+.turnos .tablaTurnos table thead tr th {
+  background-color: #a67772;
+  color: white;
+  height: 30px;
+  padding: 5px;
+}
+.turnos .tablaTurnos table tbody tr {
+  background-color: #f2ecd8;
+  color: black;
+}
+.turnos .tablaTurnos table tbody tr .email {
+  width: 5%;
+}
+.turnos .tablaTurnos table tbody td {
+  padding: 5px;
+}
+.turnos .tablaTurnos table tbody tr:hover {
+  background-color: #f2c4b3;
+  color: black;
+  transform: scale(1.01);
 }
 
 .indicaciones {
@@ -185,45 +225,46 @@ main .abajo:hover {
   margin-top: 5px;
   text-align: center;
 }
-.indicaciones .buscador {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-left: 0px;
+.indicaciones input {
+  width: 80%;
 }
-.indicaciones .buscador .buscar {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 20px 10px 20px;
+.indicaciones .btn {
+  background-color: #496773;
+  color: white;
   border: none;
-  text-align: center;
+}
+.indicaciones .btn:hover {
+  background-color: #153840;
+  color: white;
+}
+.indicaciones table {
+  margin: 20px;
+}
+.indicaciones table thead tr th {
+  background-color: #a67772;
+  color: white;
+  height: 30px;
+}
+.indicaciones table thead tr .indicaciones {
+  width: 70%;
+}
+.indicaciones table thead tr .valor {
+  width: 10%;
+}
+.indicaciones table tbody tr {
   background-color: #f2ecd8;
-  width: 300px;
+  color: black;
 }
-.indicaciones .buscador .buscar a:visited, .indicaciones .buscador .buscar a:link {
-  text-decoration: none;
-  color: rgb(73, 103, 115);
-}
-.indicaciones .buscador .buscar:hover {
-  transform: scale(0.9);
-  font-weight: bold;
-}
-@media (min-width: 600px) {
-  .indicaciones .buscador {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-.indicaciones .estudio {
-  margin: 1% 10% 1% 10%;
-  border: 2px solid black;
-  background-color: #f2ecd8;
+.indicaciones table tbody td {
   padding: 10px;
 }
-.indicaciones .estudio:hover {
+.indicaciones table tbody tr:hover {
   background-color: #f2c4b3;
+  color: black;
+  transform: scale(1.01);
+}
+.indicaciones .mensajeError {
+  display: none;
 }
 
 .resultados .resultados__buscador {

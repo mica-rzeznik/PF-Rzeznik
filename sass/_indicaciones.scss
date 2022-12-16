@@ -2,42 +2,51 @@
     margin-bottom: 40px;
     margin-top: 5px;
     text-align: center;
-    .buscador{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding-left: 0px;
-        .buscar{
-            text-decoration: none;
-            display: inline-block;
-            padding: 10px 20px 10px 20px;
-            border: none;
-            text-align: center;
-            background-color: $canela;
-            width: 300px;
-            a:visited, a:link{
-                text-decoration: none;
-                color: rgb(73 103 115);
+    input{
+        width: 80%;
+    }
+    .btn{
+        background-color: $azulgrisaceo;
+        color: white;
+        border: none;
+    }
+    .btn:hover{
+        background-color: $verdeazulado;
+        color: white;
+    }
+    table{
+        margin: 20px;
+        thead{
+            tr{
+                th{
+                    background-color: $coral;
+                    color: white;
+                    height: 30px;
+                }
+                .indicaciones{
+                    width: 70%;
+                }
+                .valor{
+                    width: 10%;
+                }
             }
         }
-        .buscar:hover{
-            transform: scale(0.90);
-            font-weight: bold;
-        }
-        @media (min-width: 600px){
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+        tbody{
+            tr{
+                background-color: $canela;
+                color: black;
+            }
+            td{
+                padding: 10px;
+            }
+            tr:hover{
+                background-color: $anaranjado;
+                color: black;
+                transform: scale(1.01);
+            }
         }
     }
-    .estudio{
-        margin: 1% 10% 1% 10%;
-        border: $borde;
-        background-color: $canela;
-        padding: 10px;
-    }
-    .estudio:hover{
-        background-color: $anaranjado;
+    .mensajeError{
+        display: none;
     }
 }

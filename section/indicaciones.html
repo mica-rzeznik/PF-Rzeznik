@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/microscopio.png">
     <link rel="stylesheet" href="../style/style.css">
     <meta name="description" content="Indicaciones para los análisis de laboratorio">
+    <script defer src="../scripts/filtrarAnalisis.js"></script>
 </head>
 <body>
     <header>
@@ -44,52 +45,25 @@
     </header>
     <section class="indicaciones">
         <h1>INDICACIONES</h1>
-        <ul class="buscador">
-            <li class="buscar">
-                <a href="#orina">Análisis de orina</a>
-            </li>
-            <li class="buscar">
-                <a href="#coagulacion">Estudio de coagulación</a>
-            </li>
-            <li class="buscar">
-                <a href="#hormona">Estudio hormonal</a>
-            </li>
-            <li class="buscar">
-                <a href="#lipido">Perfil lipídico</a>
-            </li>
-            <li class="buscar">
-                <a href="#ptog">PTOG</a>
-            </li>
-            <li class="buscar">
-                <a href="#orina24">Orina de 24 horas</a>
-            </li>
-        </ul>
-        <div class="estudio" id="orina">
-            <h2>Análisis de orina</h2>
-            <p>Debe recolectar, en un frasco estéril, la primer orina de la mañana o con un mínimo de 3 horas de retención. Remitir al laboratorio.</p>
-        </div>
-        <div class="estudio" id="coagulacion">
-            <h2>Estudio de coagulación</h2>
-            <p>Son necesarias 4 horas de ayuno.</p>
-        </div>
-        <div class="estudio" id="hormona">
-            <h2>Estudio hormonal</h2>
-            <p>Estradiol, LH, FSH, SHBG, Testosterona, DHEA, 17 OH Progesterona y SDHEA: mujer con ciclo menstrual, concurra entre el 2° y 5° día del ciclo. Progesterona: mujer con ciclo menstrual, concurra al laboratorio, estrictamente, entre los días 21 y 23 del ciclo. Cortisol: Concurra al laboratorio, entre las 7 y 8.30, con 8 horas de ayuno. </p>
-            <p>Evite, en lo posible, toda situación de estrés (incluye no correr ni caminar rápido antes de tomarse la muestra). Detalle al técnico extraccionista si está bajo algún tratamiento. </p>
-        </div>
-        <div class="estudio" id="lipido">
-            <h2>Perfil lipídico</h2>
-            <p>12 horas de ayuno.</p>
-        </div>
-        <div class="estudio" id="ptog">
-            <h2>Prueba de tolerancia oral a la glucosa</h2>
-            <p>Deberá concurrir al laboratorio en ayunas de 8 horas como mínimo y no superior a 14 horas. Se le realizará una extracción de sangre basal. Luego deberá consumir una solución azucarada y se le realizarán las demás extracciones a los tiempos que el médico tratante indique post ingesta. </p>
-            <p>Importante: Durante la prueba el paciente debe permanecer sentado, sin comer ni tomar líquido. Evitar realizar la prueba bajo situaciones de stress, fiebre, procesos infecciosos o trastornos gastrointestinales.</p>
-        </div>
-        <div class="estudio" id="orina24">
-            <h2>Orina de 24 horas</h2>
-            <p>Orinar y vaciar la vejiga DESCARTANDO esta micción. Anotar fecha y hora. A partir de allí, comenzar a juntar en botellas limpias y secas (como las de agua mineral) todas las orinas en su totalidad, terminando la recolección a la misma hora en que descartó el día anterior. Durante la recolección mantener las botellas en lugar fresco. Remitir al Laboratorio la totalidad del volumen recolectado.</p>
-        </div>
+        <input onkeyup="filtrarAnalisis()" type="search" id="filtrarAnalisis">
+        <button onclick="filtrarAnalisis()" type="button" class="btn">Buscar</button>
+        <p class="mensajeError" id="mensajeError">No realizamos este análisis en nuestro laboratorio.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="ensayo">Ensayo</th>
+                    <th class="indicaciones">Indicaciones</th>
+                    <th class="valor">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ensayo" id="ensayo"></td>
+                    <td class="indicaciones" id="indicaciones"></td>
+                    <td class="valor" id="valor"></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <footer>
         <div class="redes">

@@ -9,6 +9,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/microscopio.png">
     <link rel="stylesheet" href="../style/style.css">
     <meta name="description" content="Turnos online para laboratorio de análisis clínicos">
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../scripts/turnosPacientes.js"></script>
+    <script defer src="../scripts/turnos.js"></script>
+    <script defer src="../scripts/turnosClass.js"></script>
 </head>
 <body>
     <header>
@@ -43,46 +47,100 @@
         </nav>
     </header>
     <section class="turnos">
-        <div class="datos">
-            <h1>Datos</h1>
-            <form>
+        <form id="formularioTurnos" class="formularioTurnos">
+            <div class="datos">
+                <h1>Datos</h1>
+                <div id="formNombre" class="formInput">
                     <label for="nombre">Nombre y apellido</label>
-                    <input type="text" id="nombre" placeholder="Nombre y apellido">
-                    <label for="DNI">DNI</label>
-                    <input type="text" id="DNI" placeholder="DNI">
+                    <input type="text" id="nombre" class="input" name="nombre" placeholder="Juan Peréz">
+                </div>
+                <div id="formDni" class="formInput">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" class="input" name="dni" placeholder="12345678">
+                </div>
+                <div id="formEmail" class="formInput">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Email">
+                    <input type="email" id="email" class="input" name="email" placeholder="perez@juan.com">
+                </div>
+                <div id="formCelular" class="formInput">
                     <label for="celular">Celular</label>
-                    <input type="text" id="celular" placeholder="Celular">
+                    <input type="text" id="celular" class="input" name="celular" placeholder="1123456789">
+                </div>
+                <div id="formCobertura" class="formInput">
                     <label for="cobertura">Cobertura médica</label>
-                    <select name="Cobertura médica" id="cobertura">
+                    <select name="Cobertura médica" id="cobertura" class="input">
                         <option value="OSDE">OSDE</option>
                         <option value="PAMI">PAMI</option>
                         <option value="Swiss Medical">Swiss Medical</option>
                     </select>
+                </div>
+                <div id="formSede" class="formInput">
                     <label for="sede">Elegir sede</label>
-                    <select name="Sede" id="sede">
+                    <select name="Sede" id="sede" class="input">
                         <option value="Sede Mar del Plata">Sede Mar del Plata</option>
                         <option value="Sede San Telmo">Sede San Telmo</option>
                         <option value="Sede Caballito">Sede Caballito</option>
                         <option value="Sede Devoto">Sede Devoto</option>
                         <option value="Sede San Isidro">Sede San Isidro</option>
                     </select>
-                    <div class="extrac">
-                        <p>Extracción a domicilio</p>
-                        <input type="checkbox" value="Extracción a domicilio">
-                    </div>
-            </form>
+                </div>
+                <div id="formExtrac" class="formInput">
+                    <label>
+                        <input type="checkbox" class="input" id="extrac" name="extrac">
+                        Extracción a domicilio
+                    </label>
+                </div>
+            </div>
+            <div class="elegir">
+                <h2>Elegir turno</h2>
+                <div id="formFecha" class="formInput">
+                    <label for="fecha">Fechas disponibles</label>
+                    <input type="date" id="fecha" class="input" name="fecha">
+                </div>
+                <div id="formHora" class="formInput">
+                    <label for="hora">Horarios disponibles</label>
+                    <input type="time" id="hora" class="input" name="hora">
+                </div>
+                <div id="formbtn" class="formInput">
+                    <input type="submit" class="btn btn-light" value="Enviar" id="btnEnviar" name="btnEnviar">
+                </div>
+                <div id="turnoAsignado" class="turnoAsignado">
+                    <p></p>
+                </div>
+            </div>
+        </form>
+        <div id="consultar" class="consultar">
+            <button class="btn btnConsultar" id="btnConsultar" name="btnConsultar">Consultar turnos</button>
         </div>
-        <div class="elegir">
-            <h2>Elegir turno</h2>
-            <form>
-                <label for="fecha">Fechas disponibles</label>
-                <input type="date" id="fecha">
-                <label for="hora">Horarios disponibles</label>
-                <input type="time" id="hora">
-                <button type="button" class="btn btn-light">Enviar</button>
-            </form>
+        <div class="tablaTurnos">
+            <table id="turnosPosteriores">
+                <thead>
+                    <tr>
+                        <th class='nombre' id='nombreR'>Nombre</th>
+                        <th class='DNI' id='dniR'>DNI</th>
+                        <th class='email' id='emailR'>Email</th>
+                        <th class='celular' id='celularR'>Celular</th>
+                        <th class='cobertura' id='coberturaR'>Cobertura</th>
+                        <th class='sede' id='sedeR'>Sede</th>
+                        <th class='extrac' id='extracR'>Extracción</th>
+                        <th class='fecha' id='fechar'>Fecha</th>
+                        <th class='hora' id='horaR'>Hora</th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class='nombre' id='nombreS'></td>
+                        <td class='DNI' id='dniS'></td>
+                        <td class='email' id='emailS'></td>
+                        <td class='celular' id='celularS'></td>
+                        <td class='cobertura' id='coberturaS'></td>
+                        <td class='sede' id='sedeS'></td>
+                        <td class='extrac' id='extracS'></td>
+                        <td class='fecha' id='fechaS'></td>
+                        <td class='hora' id='horaS'></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <footer>

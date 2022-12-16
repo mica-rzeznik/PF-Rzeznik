@@ -1,0 +1,32 @@
+[
+    {
+        "ensayo": "Análisis de orina",
+        "indicacion": "Debe recolectar, en un frasco estéril, la primer orina de la mañana o con un mínimo de 3 horas de retención. Remitir al laboratorio.",
+        "unidadBioquimica": 3
+    },
+    {
+        "ensayo": "Estudio de coagulación",
+        "indicacion": "Son necesarias 4 horas de ayuno.",
+        "unidadBioquimica": 6
+    },
+    {
+        "ensayo": "Estudio hormonal",
+        "indicacion": "Estradiol, LH, FSH, SHBG, Testosterona, DHEA, 17 OH Progesterona y SDHEA: mujer con ciclo menstrual, concurra entre el 2° y 5° día del ciclo. Progesterona: mujer con ciclo menstrual, concurra al laboratorio, estrictamente, entre los días 21 y 23 del ciclo. Cortisol: Concurra al laboratorio, entre las 7 y 8.30, con 8 horas de ayuno. Evite, en lo posible, toda situación de estrés (incluye no correr ni caminar rápido antes de tomarse la muestra). Detalle al técnico extraccionista si está bajo algún tratamiento.",
+        "unidadBioquimica": 10
+    },
+    {
+        "ensayo": "Perfil lipídico",
+        "indicacion": "12 horas de ayuno.",
+        "unidadBioquimica": 11
+    },
+    {
+        "ensayo": "Prueba de tolerancia oral a la glucosa",
+        "indicacion": "Deberá concurrir al laboratorio en ayunas de 8 horas como mínimo y no superior a 14 horas. Se le realizará una extracción de sangre basal. Luego deberá consumir una solución azucarada y se le realizarán las demás extracciones a los tiempos que el médico tratante indique post ingesta. Importante: Durante la prueba el paciente debe permanecer sentado, sin comer ni tomar líquido. Evitar realizar la prueba bajo situaciones de stress, fiebre, procesos infecciosos o trastornos gastrointestinales.",
+        "unidadBioquimica": 4
+    },
+    {
+        "ensayo": "Orina de 24 horas",
+        "indicacion": "Orinar y vaciar la vejiga DESCARTANDO esta micción. Anotar fecha y hora. A partir de allí, comenzar a juntar en botellas limpias y secas (como las de agua mineral) todas las orinas en su totalidad, terminando la recolección a la misma hora en que descartó el día anterior. Durante la recolección mantener las botellas en lugar fresco. Remitir al Laboratorio la totalidad del volumen recolectado.",
+        "unidadBioquimica": 5
+    }
+]
